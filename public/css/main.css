@@ -1,30 +1,203 @@
-html, body {
-    background-color: lightblue;
-    font-family: Arial, sans-serif;
+/* ==========================================
+   RESET
+========================================== */
+
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* ==========================================
+   BODY
+========================================== */
+
 body {
-    nav {
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f3f6f9;
+    color: #2f3e46;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-        li {
-            display: inline;
-            margin-right: 15px;
-        }
+/* ==========================================
+   NAVIGATION
+========================================== */
 
-        a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
+nav {
+    background: #1f5c99;
+    box-shadow: 0 3px 8px rgba(0,0,0,.12);
+}
 
-            &:hover {
-                color: #0066cc;
-            }
-        }
+nav ul {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .5px;
+    transition: color .3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #ffd166;
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+main {
+    flex: 1;
+    max-width: 1000px;
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1 {
+    color: #1f5c99;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.3rem;
+}
+
+h2 {
+    color: #2a7abf;
+    margin: 25px 0 15px;
+}
+
+h3 {
+    color: #1f5c99;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+/* ==========================================
+   HOME PAGE
+========================================== */
+
+.main-logo {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 35px auto;
+}
+
+/* ==========================================
+   LISTS
+========================================== */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* ==========================================
+   ORGANIZATIONS
+========================================== */
+
+main li {
+    background: #f8fafc;
+    margin-bottom: 18px;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-left: 5px solid #1f5c99;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+
+li img {
+    width: 70px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+strong {
+    color: #1f5c99;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background: #1f5c99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+    color: inherit;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
-}          
+
+    main {
+        width: 95%;
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li img {
+        width: 90px;
+    }
+
+    .main-logo {
+        max-width: 240px;
+    }
+}
