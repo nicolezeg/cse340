@@ -1,5 +1,6 @@
-import { getAllProjects } from './src/models/projects.js';
 import { getAllOrganizations } from './src/models/organizations.js';
+import { getAllProjects } from './src/models/projects.js';
+import { getAllCategories } from './src/models/categories.js';
 import express from 'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -55,8 +56,12 @@ app.get('/projects', async (req, res) => {
 });
 
 app.get('/categories', async (req, res) => {
-    const title = 'Categories';
-    res.render('categories', { title });
+    const categories = await getAllCategories();
+
+    res.render('categories', {
+        title: 'Categories',
+        categories
+    });
 });
 
 app.listen(PORT, async () => {

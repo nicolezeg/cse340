@@ -62,3 +62,49 @@ VALUES
 (3, 'Emergency Support', 'Provide resources during emergencies.', 'Arequipa', '2026-09-15'),
 (3, 'Community Garden', 'Create and maintain a garden.', 'Arequipa', '2026-09-20'),
 (3, 'Food Preparation Project', 'Prepare meals for people in need.', 'Arequipa', '2026-09-25');
+
+
+--Categories
+CREATE TABLE category (
+    category_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE project_category (
+    project_id INT NOT NULL,
+    category_id INT NOT NULL,
+
+    PRIMARY KEY (project_id, category_id),
+
+    FOREIGN KEY (project_id)
+        REFERENCES service_project(project_id)
+        ON DELETE CASCADE,
+
+    FOREIGN KEY (category_id)
+        REFERENCES category(category_id)
+        ON DELETE CASCADE
+);
+
+INSERT INTO category (name)
+VALUES
+('Education'),
+('Environment'),
+('Community Service');
+
+INSERT INTO project_category (project_id, category_id)
+VALUES
+(1,3),
+(2,2),
+(3,1),
+(4,3),
+(5,3),
+(6,2),
+(7,2),
+(8,3),
+(9,2),
+(10,1),
+(11,3),
+(12,3),
+(13,1),
+(14,3),
+(15,3);
