@@ -42,27 +42,26 @@ CREATE TABLE service_project (
 INSERT INTO service_project 
 (organization_id, title, description, location, date)
 VALUES
--- Organization 1
-(1, 'Food Drive', 'Collect and distribute food to families in need.', 'Lima', '2026-08-01'),
-(1, 'Community Cleanup', 'Clean public areas and parks.', 'Lima', '2026-08-10'),
-(1, 'School Supply Donation', 'Provide school supplies to students.', 'Lima', '2026-08-15'),
-(1, 'Senior Assistance', 'Support elderly community members.', 'Lima', '2026-08-20'),
-(1, 'Health Awareness Event', 'Promote healthy habits in the community.', 'Lima', '2026-08-25'),
+-- Organization 1: BrightFuture Builders
+(1, 'Food Donation Drive', 'Collect and distribute food to families in need.', 'Lima', '2026-08-05'),
+(1, 'Community Garden Project', 'Plant and maintain a garden for the neighborhood.', 'Lima', '2026-08-12'),
+(1, 'School Supply Collection', 'Gather school supplies for students.', 'Lima', '2026-08-20'),
+(1, 'Senior Support Program', 'Provide assistance and companionship for seniors.', 'Lima', '2026-09-01'),
+(1, 'Clean Water Campaign', 'Help provide clean water resources.', 'Lima', '2026-09-10'),
 
--- Organization 2
-(2, 'Tree Planting', 'Plant trees to improve the environment.', 'Cusco', '2026-08-05'),
-(2, 'Recycling Campaign', 'Teach recycling practices.', 'Cusco', '2026-08-12'),
-(2, 'Animal Shelter Support', 'Help care for rescued animals.', 'Cusco', '2026-08-18'),
-(2, 'Youth Mentoring', 'Provide guidance for young people.', 'Cusco', '2026-08-22'),
-(2, 'Neighborhood Improvement', 'Improve local community spaces.', 'Cusco', '2026-08-30'),
+-- Organization 2: GreenHarvest Growers
+(2, 'Beach Cleanup', 'Remove trash and protect local beaches.', 'Huacho', '2026-08-07'),
+(2, 'Tree Planting Event', 'Plant trees to improve the environment.', 'Huacho', '2026-08-18'),
+(2, 'Animal Shelter Support', 'Help care for rescued animals.', 'Huacho', '2026-08-25'),
+(2, 'Recycling Workshop', 'Teach recycling practices to the community.', 'Huacho', '2026-09-05'),
+(2, 'Youth Mentoring Program', 'Support young people through mentoring.', 'Huacho', '2026-09-15'),
 
--- Organization 3
-(3, 'Clothing Donation', 'Collect clothes for families.', 'Arequipa', '2026-09-01'),
-(3, 'Literacy Program', 'Help children improve reading skills.', 'Arequipa', '2026-09-08'),
-(3, 'Emergency Support', 'Provide resources during emergencies.', 'Arequipa', '2026-09-15'),
-(3, 'Community Garden', 'Create and maintain a garden.', 'Arequipa', '2026-09-20'),
-(3, 'Food Preparation Project', 'Prepare meals for people in need.', 'Arequipa', '2026-09-25');
-
+-- Organization 3: UnityServe Volunteers
+(3, 'Clothing Donation', 'Collect clothing for families.', 'Cusco', '2026-08-10'),
+(3, 'Medical Assistance Campaign', 'Provide basic health support.', 'Cusco', '2026-08-22'),
+(3, 'Literacy Program', 'Teach reading skills to children.', 'Cusco', '2026-09-03'),
+(3, 'Community Construction', 'Improve community spaces.', 'Cusco', '2026-09-12'),
+(3, 'Emergency Relief Project', 'Provide support during emergencies.', 'Cusco', '2026-09-20');
 
 --Categories
 CREATE TABLE category (
